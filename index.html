@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DetentionPaid — Get paid for every hour you sit at the dock</title>
+<meta name="description" content="DetentionPaid logs your detention time automatically and sends brokers a GPS-backed invoice in one tap. Built for owner-operators, not 500-truck fleets. $19/mo." />
+<style>
+  :root{
+    --ink:#0e1726; --muted:#5b6b82; --line:#e6e9f0;
+    --brand:#1463ff; --brand-dark:#0f4fd6; --accent:#16a34a; --bg:#f7f9fc;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.55;background:#fff;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:880px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--brand);color:#fff;font-weight:700;font-size:17px;padding:16px 30px;border:0;border-radius:12px;cursor:pointer;text-decoration:none;transition:.15s}
+  .btn:hover{background:var(--brand-dark);transform:translateY(-1px)}
+  .btn-ghost{background:#fff;color:var(--brand);border:2px solid var(--brand)}
+  .btn-ghost:hover{background:#f0f5ff}
+  section{padding:64px 0}
+  .eyebrow{color:var(--brand);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;margin-bottom:14px}
+
+  /* HERO */
+  .hero{background:linear-gradient(180deg,#0e1726 0%,#16233b 100%);color:#fff;padding:72px 0 64px}
+  .hero h1{font-size:clamp(30px,6vw,50px);line-height:1.08;letter-spacing:-.02em;font-weight:800}
+  .hero p.sub{font-size:clamp(17px,2.4vw,21px);color:#c5d2e6;margin:22px 0 30px;max-width:620px}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .count{color:#9fb3d1;font-size:14px;margin-top:16px}
+  .count b{color:#fff}
+
+  /* PROBLEM */
+  .stat{font-size:clamp(24px,4vw,34px);font-weight:800;letter-spacing:-.01em}
+  .stat span{color:var(--brand)}
+  ul.pain{list-style:none;margin:26px 0 0}
+  ul.pain li{padding:12px 0;border-bottom:1px solid var(--line);font-size:18px;display:flex;gap:12px;align-items:flex-start}
+  ul.pain li::before{content:"✕";color:#dc2626;font-weight:800;flex:0 0 auto}
+
+  /* STEPS */
+  .steps{background:var(--bg)}
+  .steps h2,.pricing h2,.problem h2{font-size:clamp(24px,4vw,34px);font-weight:800;letter-spacing:-.01em}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px}
+  .num{width:38px;height:38px;border-radius:10px;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:14px}
+  .card h3{font-size:19px;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:15px}
+  .trackline{margin-top:30px;font-size:17px;color:var(--muted)}
+  .trackline b{color:var(--ink)}
+
+  /* PRICING */
+  .price-card{border:2px solid var(--brand);border-radius:20px;padding:34px;max-width:460px;margin-top:30px;background:#fff}
+  .price-card .big{font-size:46px;font-weight:800}
+  .price-card .big small{font-size:18px;color:var(--muted);font-weight:600}
+  .compare{color:var(--muted);margin:14px 0 24px;font-size:15px}
+  .compare s{color:#dc2626}
+
+  /* FINAL CTA */
+  .final{background:linear-gradient(180deg,#16233b 0%,#0e1726 100%);color:#fff;text-align:center}
+  .final h2{font-size:clamp(26px,4.5vw,38px);font-weight:800;margin-bottom:14px}
+  .final p{color:#c5d2e6;margin-bottom:28px;font-size:18px}
+  form{display:flex;gap:10px;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+  form input{flex:1;min-width:220px;padding:16px;border-radius:12px;border:0;font-size:16px}
+  .free-note{color:#9fb3d1;font-size:14px;margin-top:16px}
+
+  footer{padding:30px 0;text-align:center;color:var(--muted);font-size:13px}
+  @media(max-width:680px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">For owner-operators &amp; small carriers</div>
+    <h1>You sat 5 hours at the dock.<br/>You should've gotten paid for it.</h1>
+    <p class="sub">DetentionPaid logs your wait time automatically and sends the broker a clean, GPS-backed detention invoice — so you stop leaving money on the table.</p>
+    <div class="cta-row">
+      <a href="#join" class="btn">Get early access — $19/mo</a>
+      <a href="#how" class="btn btn-ghost" style="border-color:#3a4d6e;color:#cdd9ec;background:transparent">See how it works</a>
+    </div>
+    <p class="count">Join <b id="waitcount">the</b> drivers on the waitlist. First 100 get <b>3 months free.</b></p>
+  </div>
+</header>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="wrap">
+    <div class="eyebrow">The problem</div>
+    <p class="stat">Over <span>90%</span> of carriers charge detention.<br/>Fewer than <span>50%</span> ever get paid.</p>
+    <p style="margin-top:16px;font-size:18px;color:var(--muted)">Not because the claim is wrong — because you couldn't <em>prove</em> it.</p>
+    <ul class="pain">
+      <li>Forgot to write down your exact arrival time</li>
+      <li>No photo of the dock, no signed timestamp</li>
+      <li>Broker says "we never got an invoice"</li>
+      <li>The claim sits in your email and you forget to follow up</li>
+    </ul>
+    <p style="margin-top:24px;font-size:18px">You're not bad at your job. You're just too busy <b>driving</b> to play paperwork detective.</p>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="steps" id="how">
+  <div class="wrap">
+    <div class="eyebrow">How it works</div>
+    <h2>Tap. Drive. Get paid.</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="num">1</div>
+        <h3>Tap "Arrived"</h3>
+        <p>We log your GPS location and timestamp automatically the moment you reach the facility.</p>
+      </div>
+      <div class="card">
+        <div class="num">2</div>
+        <h3>Snap the BOL</h3>
+        <p>Your proof is attached and time-stamped. Photos of the dock, gate, and paperwork — all in one place.</p>
+      </div>
+      <div class="card">
+        <div class="num">3</div>
+        <h3>Tap "Left"</h3>
+        <p>We calculate your wait and generate a broker-ready detention invoice in one tap.</p>
+      </div>
+    </div>
+    <p class="trackline">Then track every claim: <b>Submitted → Paid → Overdue.</b> No TMS. No factoring company. No $5,000/year contract.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="wrap">
+    <div class="eyebrow">Pricing</div>
+    <h2>Built for the 1-truck operator,<br/>not the 500-truck fleet.</h2>
+    <div class="price-card">
+      <div class="big">$19<small>/month</small></div>
+      <p class="compare">Other detention tools start at <s>$5,000/year</s> and lock you into software you don't need.</p>
+      <a href="#join" class="btn" style="width:100%;text-align:center">Reserve my spot</a>
+      <p style="margin-top:14px;color:var(--muted);font-size:14px">Cancel anytime. First 100 drivers get 3 months free.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="join">
+  <div class="wrap">
+    <h2>Stop eating detention.</h2>
+    <p>Get on the early access list. We'll email you the moment it's ready.</p>
+    <!-- Formspree endpoint wired in. Submissions go to the DetentionPaid Waitlist form. -->
+    <form action="https://formspree.io/f/mbdebjbp" method="POST">
+      <input type="email" name="email" placeholder="you@example.com" required />
+      <button type="submit" class="btn">Notify me</button>
+    </form>
+    <p class="free-note">First 100 drivers get 3 months free. No spam — one email when we launch.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 DetentionPaid · Made by a driver, for drivers</div>
+</footer>
+
+<script>
+  // Simple social-proof counter. Starts from a base so the page never says "0".
+  // Swap to a real count once your form provider gives you submission numbers.
+  (function(){
+    var base = 0; // set to real waitlist number as it grows
+    var el = document.getElementById('waitcount');
+    el.textContent = base > 0 ? base : 'the first';
+  })();
+</script>
+</body>
+</html>
