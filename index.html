@@ -132,23 +132,30 @@
     <div class="price-card">
       <div class="big">$19<small>/month</small></div>
       <p class="compare">Other detention tools start at <s>$5,000/year</s> and lock you into software you don't need.</p>
-      <a href="#join" class="btn" style="width:100%;text-align:center">Reserve my spot</a>
+      <a href="#join" class="btn" style="width:100%;text-align:center">Reserve my founding spot — $19/mo</a>
       <p style="margin-top:14px;color:var(--muted);font-size:14px">Cancel anytime. First 100 drivers get 3 months free.</p>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- FINAL CTA: $19 pre-order (real demand signal) primary, free notify secondary -->
 <section class="final" id="join">
   <div class="wrap">
-    <h2>Stop eating detention.</h2>
-    <p>Get on the early access list. We'll email you the moment it's ready.</p>
-    <!-- Formspree endpoint wired in. Submissions go to the DetentionPaid Waitlist form. -->
+    <h2>Lock in the $19/mo founding rate.</h2>
+    <p>Reserve your spot now — <b>no charge today.</b> We'll email a payment link the day it launches. First 100 drivers get <b>3 months free.</b></p>
+    <!-- PRE-ORDER intent: these submissions = real willingness to pay $19 (the metric that matters for GO/NO-GO) -->
     <form action="https://formspree.io/f/mbdebjbp" method="POST">
+      <input type="hidden" name="intent" value="preorder_19" />
       <input type="email" name="email" placeholder="you@example.com" required />
-      <button type="submit" class="btn">Notify me</button>
+      <button type="submit" class="btn">Reserve my founding spot — $19/mo</button>
     </form>
-    <p class="free-note">First 100 drivers get 3 months free. No spam — one email when we launch.</p>
+    <p class="free-note" style="margin-top:22px">Not ready to pay yet? Just get a heads-up at launch:</p>
+    <!-- FREE intent: separated so soft signups don't inflate the paid-demand number -->
+    <form action="https://formspree.io/f/mbdebjbp" method="POST" style="margin-top:8px">
+      <input type="hidden" name="intent" value="free_updates" />
+      <input type="email" name="email" placeholder="you@example.com" required />
+      <button type="submit" class="btn btn-ghost" style="border-color:#3a4d6e;color:#cdd9ec;background:transparent">Just notify me</button>
+    </form>
   </div>
 </section>
 
