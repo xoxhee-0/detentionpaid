@@ -3,17 +3,21 @@
 Goal: decide GO / NO-GO **before writing any product code.**
 Run for ~7 days, aim for 300-500 visitors.
 
-## Daily log
+> ⚠️ **측정 갭 (트래픽 붓기 전 수정 필요):** 현재 랜딩은 "$19" 버튼도 "Reserve" 버튼도
+> 전부 이메일 폼(`#join`)으로만 보냄 → **무료 이메일 가입만 측정되고, 진짜 신호인
+> "$19 사전예약 클릭"이 안 잡힘.** 별도 $19 의향 경로(intent 필드/2nd form)를 붙여야 함.
+
+## Daily log (Day1 = 2026-06-17, ~7일)
 
 | Date | Source posted | Visitors | Email signups | "$19 Pre-order" clicks | Notes / quotes |
 |------|---------------|---------:|--------------:|----------------------:|----------------|
-|      |               |          |               |                       |                |
-|      |               |          |               |                       |                |
-|      |               |          |               |                       |                |
-|      |               |          |               |                       |                |
-|      |               |          |               |                       |                |
-|      |               |          |               |                       |                |
-|      |               |          |               |                       |                |
+| 06-17 (D1) | Reddit story #1 (1개 서브레딧) |  |  |  |  |
+| 06-18 (D2) | 기존 detention 스레드 댓글 ×2-3 |  |  |  |  |
+| 06-19 (D3) | Facebook 그룹 (1개씩) |  |  |  |  |
+| 06-20 (D4) | TikTok/YouTube 댓글 |  |  |  |  |
+| 06-21 (D5) | TikTok/YouTube 댓글 |  |  |  |  |
+| 06-22 (D6) | (여력 시 2번째 서브레딧) |  |  |  |  |
+| 06-23 (D7) | 집계 + GO/NO-GO 판정 |  |  |  |  |
 
 ## Totals
 - Visitors: ____
