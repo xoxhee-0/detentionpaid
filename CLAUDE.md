@@ -46,3 +46,6 @@
 ## 6. 의사결정 로그
 - 초기: 랜딩 + 게시글 + 트래커 검증 키트 구축, Formspree 연동
 - 2026-06-16: 생태계 허브(mission-control)에 편입. CLAUDE.md 메모리 생성
+- 2026-06-18: Competitor intel: freightproof.com appears pre-launch/waitlist, priced at $24.99/mo, with no visible traffic signal.
+- 2026-06-18: Market demand signal is still lukewarm: Reddit validation signal around 3 comments, so do not overbuild before $19 preorder clicks.
+- 2026-06-18: Positioning: DetentionPaid stays cheaper at $19/mo, validates first, and emphasizes no factoring lock-in/no $5k TMS/built by an owner-op.
